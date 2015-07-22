@@ -2,14 +2,10 @@ My personal alias commands for Windows _Command Prompt_.
 
 All these alias are enabled by [DOSKEY](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx) native command.
 
-####List registered macros
-```shell
-doskey /MACROS
-```
-####Add a new macro
-```shell
-doskey {alias}={command}
-```
+####Doskey commands
+`doskey /MACROS` - List registered macros
+
+`doskey {alias}={command}` - Add a new macro
 
 ###Install
 1. Save 'doskey.bat' file to %userprofile% folder.
