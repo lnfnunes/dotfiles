@@ -1,6 +1,6 @@
 doskey clear=cls $1
 doskey ls=cls $T dir $1
-doskey ll=cls $T dir /d $1
+doskey ll=cls $T dir /ad/c $1
 doskey ..=cd ../
 doskey ...=cd ../../
 doskey ...=cd ../../../
