@@ -7,7 +7,7 @@ All these alias are enabled by [DOSKEY](https://msdn.microsoft.com/en-us/library
 * `doskey {alias}={command}` - Add a new macro
 
 ###Install
-1. Save 'doskey.bat' file to %userprofile% folder.
+1. Save [doskey.bat](doskey.bat) file to %userprofile% folder.
 1. [windows + R] > regedit > HKEY_CURRENT_USER\Software\Microsoft\Command Processo
 1. [RightClick] > New > String value
 1. Set key: "Autorun"
