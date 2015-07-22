@@ -1,2 +1,5 @@
 # dotfiles
-My dot files
+This repo contains my personal dot files.
+
+####Windows
+* [windows-alias](windows.md)
