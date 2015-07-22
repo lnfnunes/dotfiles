@@ -21,7 +21,7 @@ doskey {alias}={command}
 ###Shell environment
 * `clear` - Unix equivalent sintax
 * `ls` - Unix equivalent sintax. Clear command then list current dir
-* `ll` - Unix equivalent sintax. Clear command then list current dir
+* `ll` - Unix equivalent sintax. Clear command then list current dir folders
 * `..` - Return one folder up
 * `...` - Return two folders up
 * `...` - Return three folders up
