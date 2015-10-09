@@ -1,19 +1,25 @@
-alias less='less -r'
-
-# --show-control-chars: help showing Korean or accented characters
+# --Show-control-chars: help showing Korean or accented characters
 alias ls='ls -F --color --show-control-chars'
 
-# --helpers
+# --Helpers
 alias cls='clear'
-alias ll='ls -l'
+alias ll='clear && ls -l'
 alias ..='cd ..'
 alias ...='cd ../../'
+alias /='cd /'
 
-#GIT
+#Git
 alias gs='git status '
-alias ga='git add'
-alias ga.='git add .'
-alias gb='git branch '
+alias ga='git add $1'
+alias gb='git branch $1'
 alias gcm='git commit'
 alias gd='git diff'
 alias gco='git checkout '
+alias master='git checkout master $1'
+alias push='git push'
+
+#Web
+alias http='python -m http.server $1'
+
+#Editor
+alias less='less -r'
