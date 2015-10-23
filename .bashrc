@@ -5,6 +5,7 @@ alias ls='clear && ls -F'
 alias lsd='clear && ls -l | grep "^d"' # List only directories
 alias ll='clear && ls -l -F'
 alias la='clear && ls -F -la'
+alias cd..="cd .."
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
