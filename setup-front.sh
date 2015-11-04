@@ -39,10 +39,19 @@ echo "${green}✔ ${nc}SVN is installed"
 
 
 echo "${blue}## NODE (modules) ##${nc}"
+nvm=`nvm --version | wc -l`
+if [ "$nvm" != "1" ]; then
+  echo "${red}✖ ${nc}Installing NVM..."
+  git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+  . ~/.nvm/nvm.sh
+  cd ..
+fi
+echo "${green}✔ ${nc}NVM is installed"
+
 node=`which node`
 if [ "$node" = "" ]; then
-  echo "${red}✖ ${nc}NodeJS must be (manually) installed! Check nodejs.org${nc}"
-  exit 1
+  echo "${red}✖ ${nc}Installing Node..."
+  nvm install stable
 fi
 echo "${green}✔ ${nc}Node is installed"
 
