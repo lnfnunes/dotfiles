@@ -29,6 +29,7 @@ then run _./setup-front.sh_
 ✔ Git is installed
 ✔ SVN is installed
 ## NODE (modules) ##
+✔ NVM is installed
 ✔ Node is installed
 ✔  |__ Gulp is installed
 ✔  |__ Grunt is installed
