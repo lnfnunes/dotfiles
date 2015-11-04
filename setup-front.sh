@@ -14,6 +14,13 @@ if [ subl = "" ]; then
 fi
 echo "${green}✔ ${nc}Sublime is installed"
 
+vim=`which vim`
+if [ vim = "" ]; then
+  echo "${red}✖ ${nc}Installing Vim..."
+  apt-get install vim
+fi
+echo "${green}✔ ${nc}Vim is installed"
+
 
 echo "${blue}## SCM ##${nc}"
 git=`which git`
