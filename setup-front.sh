@@ -39,12 +39,18 @@ echo "${green}✔ ${nc}SVN is installed"
 
 
 echo "${blue}## NODE (modules) ##${nc}"
+if [ -d ~/.nvm/ ]; then
+  . ~/.nvm/nvm.sh
+fi
 nvm=`nvm --version | wc -l`
 if [ "$nvm" != "1" ]; then
   echo "${red}✖ ${nc}Installing NVM..."
-  git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
-  . ~/.nvm/nvm.sh
-  cd ..
+
+  if [ ! -d ~/.nvm/ ]; then
+    git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+    . ~/.nvm/nvm.sh
+    cd ..
+  fi
 fi
 echo "${green}✔ ${nc}NVM is installed"
 
