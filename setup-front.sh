@@ -13,6 +13,14 @@ if [ subl = "" ]; then
   apt-get install sublime-text
 fi
 echo "${green}✔ ${nc}Sublime is installed"
+echo "   |__Synching Sublime Packages and Settings..."
+# Download Package Controll
+wget https://packagecontrol.io/Package%20Control.sublime-package -O ~/.config/sublime-text-3/Installed\ Packages/Package\ Control.sublime-package -N -q
+# Download Packages
+wget https://raw.githubusercontent.com/lnfnunes/dotfiles/master/sublime/Package%20Control.sublime-settings -O ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings -N -q
+# Download Preferences
+wget https://raw.githubusercontent.com/lnfnunes/dotfiles/master/sublime/Preferences.sublime-settings -O ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings -N -q
+echo "${green}✔ ${nc}Sublime is synchronized"
 
 vim=`which vim`
 if [ vim = "" ]; then
@@ -39,6 +47,7 @@ echo "${green}✔ ${nc}SVN is installed"
 
 
 echo "${blue}## NODE (modules) ##${nc}"
+
 if [ -d ~/.nvm/ ]; then
   . ~/.nvm/nvm.sh
 fi
@@ -56,6 +65,8 @@ echo "${green}✔ ${nc}NVM is installed"
 
 node=`which node`
 if [ "$node" = "" ]; then
+  #echo "${red}✖ ${nc}NodeJS must be (manually) installed! Check nodejs.org${nc}"
+  #exit 1
   echo "${red}✖ ${nc}Installing Node..."
   nvm install stable
 fi
