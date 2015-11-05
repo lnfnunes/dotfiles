@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Color Highlighter",
+		"CSScomb",
+		"Emmet",
+		"Handlebars",
+		"Package Control",
+		"Sass",
+		"WakaTime"
+	]
+}
