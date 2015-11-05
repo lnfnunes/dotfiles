@@ -9,7 +9,7 @@ alias cd..="cd .."
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
-alias reload='. ~/.bashrc'
+alias reload='source ~/.bashrc'
 
 #Git
 alias gst='git status'
