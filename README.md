@@ -24,6 +24,8 @@ then run _./setup-front.sh_
 ```shell
 ## EDITOR ##
 ✔ Sublime is installed
+   |__Synching Sublime Packages and Settings...
+✔ Sublime is synchronized
 ✔ Vim is installed
 ## SCM ##
 ✔ Git is installed
