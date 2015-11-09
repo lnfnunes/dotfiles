@@ -72,33 +72,26 @@ if [ "$node" = "" ]; then
 fi
 echo "${green}✔ ${nc}Node is installed"
 
-package=`npm list -g gulp | grep ERR`
+package=`npm list -g gulp grunt | grep ERR`
 if [ "$package" != "" ]; then
-  echo "${red}✖ ${nc} |__ Installing gulp..."
-  npm install -g gulp
+  echo "${red}✖ ${nc} |__ Installing Gulp/Grunt..."
+  npm install -g gulp grunt-cli
 fi
-echo "${green}✔ ${nc} |__ Gulp is installed"
+echo "${green}✔ ${nc} |__ Gulp/Grunt is installed"
 
-package=`npm list -g grunt | grep ERR`
+package=`npm list -g bower yo | grep ERR`
 if [ "$package" != "" ]; then
-  echo "${red}✖ ${nc} |__ Installing grunt..."
-  npm install -g grunt-cli
+  echo "${red}✖ ${nc} |__ Installing Bower/Yo..."
+  npm install -g bower yo
 fi
-echo "${green}✔ ${nc} |__ Grunt is installed"
+echo "${green}✔ ${nc} |__ Bower/Yo is installed"
 
-package=`npm list -g bower | grep ERR`
+package=`npm list -g jshint lint jscs grep ERR`
 if [ "$package" != "" ]; then
-  echo "${red}✖ ${nc} |__ Installing bower..."
-  npm install -g bower
+  echo "${red}✖ ${nc} |__ Installing jshint/csslint/jscs..."
+  npm install -g jshint csslint jscs
 fi
-echo "${green}✔ ${nc} |__ Bower is installed"
-
-package=`npm list -g yo | grep ERR`
-if [ "$package" != "" ]; then
-  echo "${red}✖ ${nc} |__ Installing yo..."
-  npm install -g yo
-fi
-echo "${green}✔ ${nc} |__ yo is installed"
+echo "${green}✔ ${nc} |__ jshint/csslint/jscs is installed"
 
 echo "${green}Everything is installed. EVERYTHING !"
 echo "\$\$\$---  Show me the code!!!  ---\$\$\$${nc}"

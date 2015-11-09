@@ -21,7 +21,6 @@
 	],
 	"bold_folder_labels": true,
 	"caret_extra_width": 2,
-	"color_scheme": "Packages/User/SublimeLinter/Monokai Bright (SL).tmTheme",
 	"font_size": 9,
 	"highlight_modified_tabs": true,
 	"ignored_packages":

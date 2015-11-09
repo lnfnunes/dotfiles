@@ -8,10 +8,14 @@
 		"Alignment",
 		"Color Highlighter",
 		"CSScomb",
+		"EditorConfig",
 		"Emmet",
+		"Git",
+        	"GitGutter",
 		"Handlebars",
 		"Package Control",
 		"Sass",
+		"SublimeLinter",
 		"WakaTime"
 	]
 }
