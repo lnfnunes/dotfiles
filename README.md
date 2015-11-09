@@ -33,10 +33,9 @@ then run _./setup-front.sh_
 ## NODE (modules) ##
 ✔ NVM is installed
 ✔ Node is installed
-✔  |__ Gulp is installed
-✔  |__ Grunt is installed
-✔  |__ Bower is installed
-✔  |__ yo is installed
+✔  |__ Gulp/Grunt is installed
+✔  |__ Bower/Yo is installed
+✔  |__ jshint/csslint/jscs is installed
 Everything is installed. EVERYTHING !
 $$$---  Show me the code!!!  ---$$$
 ```
