@@ -11,9 +11,12 @@
 		"EditorConfig",
 		"Emmet",
 		"Git",
-        	"GitGutter",
+		"GitGutter",
 		"Handlebars",
+		"Markdown Preview",
+		"Monokai JSON+",
 		"Package Control",
+		"Pretty JSON",
 		"Sass",
 		"SublimeLinter",
 		"WakaTime"
