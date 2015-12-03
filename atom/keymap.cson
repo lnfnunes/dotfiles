@@ -1,0 +1,13 @@
+'body':
+  'alt-q': 'application:quit'
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-q': 'editor:toggle-line-comments'
+
+'atom-text-editor:not([mini])':
+  'ctrl-alt-up': 'keyboard-scroll:scrollUpWithCursor'
+  'ctrl-alt-down': 'keyboard-scroll:scrollDownWithCursor'
+  'F4': 'symbols-view:go-to-declaration'
+'atom-text-editor':
+  'ctrl-alt-up': 'keyboard-scroll:scrollUpWithCursor'
+  'ctrl-alt-down': 'keyboard-scroll:scrollDownWithCursor'
+  'F4': 'symbols-view:go-to-declaration'

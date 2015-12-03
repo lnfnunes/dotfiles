@@ -1,0 +1,33 @@
+"*":
+  "exception-reporting":
+    userId: "814b1a1a-76be-00d2-e6e7-617bc460bc11"
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "linter-scss-lint"
+      "sublime-panes"
+    ]
+  editor:
+    invisibles: {}
+    tabType: "soft"
+    fontSize: 11
+    lineHeight: 1.3
+    preferredLineLength: 120
+    showIndentGuide: true
+  "jscs-fixer":
+    esprima: true
+  "keyboard-scroll": {}
+  jshint:
+    supportLintingJsx: true
+  "file-icons":
+    coloured: false
+  "terminal-panel": {}
+  "linter-jscs":
+    esnext: true
+    onlyConfig: true
+    preset: "grunt"
+  "linter-scss-lint": {}
+  "tab-switcher": {}
+  tabs:
+    usePreviewTabs: true
