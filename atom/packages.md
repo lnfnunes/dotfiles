@@ -1,16 +1,16 @@
-file-icons/
-javascript-snippets/
-jscs-fixer/
-jshint/
-keyboard-scroll/
-linter/
-linter-eslint/
-linter-jscs/
-linter-scss-lint/
-merge-conflicts/
-packages.md
-project-manager/
-project-view/
-sublime-panes/
-tab-switcher/
-terminal-panel/
+* file-icons/
+* javascript-snippets/
+* jscs-fixer/
+* jshint/
+* keyboard-scroll/
+* linter/
+* linter-eslint/
+* linter-jscs/
+* linter-scss-lint/
+* merge-conflicts/
+* packages.md
+* project-manager/
+* project-view/
+* sublime-panes/
+* tab-switcher/
+* terminal-panel/
