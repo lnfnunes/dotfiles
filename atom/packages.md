@@ -1,4 +1,5 @@
 * file-icons/
+* highlight-selected/
 * javascript-snippets/
 * jscs-fixer/
 * jshint/
