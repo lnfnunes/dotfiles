@@ -115,6 +115,7 @@ alias gp="git push $1 $2"
 alias gpu="git pull $1 $2"
 alias gpo="git push origin $1"
 alias gpuo="git pull origin $1"
+alias gd1="git diff HEAD\@\{1\}"
 
 #Web
 alias http='python -m SimpleHTTPServer $1'
