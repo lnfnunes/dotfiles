@@ -1,0 +1,34 @@
+[user]
+	email = dr1design@gmail.com
+	name = Leandro Nunes
+
+[core]
+	editor = vim
+
+[color]
+  ui            = true
+
+[push]
+	default = simple
+
+[credential]
+	helper = cache --timeout=129600
+
+[gitflow "prefix"]
+  feature       = feature/
+  release       = release/
+  hotfix        = hotfix/
+  support       = support/
+  versiontag    = v
+
+[push]
+  default = matching
+
+[alias]
+  lg            = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  st            = status -sb
+  standup       = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --since yesterday
+[merge]
+	tool = meld
+[mergetool "meld"]
+	trustExitCode = false
