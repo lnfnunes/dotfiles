@@ -21,9 +21,20 @@ alias gdf='git diff $1'
 alias gco='git checkout $1'
 alias gm='git checkout master $1'
 alias gp='git push $1'
+alias gl="git log --pretty --decorate --date=short"
+alias gs="git status"
+alias gco="git checkout $1"
+alias gb="git branch $1"
+alias gcm="git commit -m $1"
+alias ga="git add ."
+alias gac="git add . && git commit -m $1"
+alias gcache="git config --global credential.helper cache --timeout=3600"
 
 #Web
 alias http='python -m http.server $1'
 
 #Editor
 alias less='less -r $1'
+
+export NODE_HOME="/opt/nodejs"
+export PATH=$PATH:$NODE_HOME/bin
