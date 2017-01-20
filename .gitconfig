@@ -8,9 +8,6 @@
 [color]
   ui            = true
 
-[push]
-	default = simple
-
 [credential]
 	helper = cache --timeout=129600
 
