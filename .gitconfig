@@ -23,6 +23,8 @@
 	pusho = push origin
 	pushon = push origin --no-verify
 	diff = diff --word-diff
+	dl = "!git ll -1"
+	dlc = diff --cached HEAD^
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
