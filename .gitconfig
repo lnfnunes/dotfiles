@@ -1,15 +1,13 @@
 [user]
 	name = Leandro Nunes
-	email = dr1design@gmail.com
+	email = leandrof@ciandt.com
 
 [core]
 	editor = vim
+	excludesfile = /Users/leandrof/.gitignore_global
 
 [color]
 	ui = true
-
-[credential]
-	helper = cache --timeout=129600
 
 [alias]
 	co = checkout
@@ -17,23 +15,34 @@
 	ci = commit
 	cia = commit --amend
 	ciaa = commit --amend -C HEAD
+	gfa = 'fetch --all'
 	st = status
 	pullo = pull origin
 	pullu = pull upstream master
 	pusho = push origin
 	pushon = push origin --no-verify
+	# Get the current branch name (not so useful in itself, but used in
+	# other aliases)
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	# Push the current branch to the remote "origin", and set it to track
+	# the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+	# Delete the remote version of the current branch
+	unpublish = "!git push origin :$(git branch-name)"
+	# Interactively rebase all the commits on the current branch
+	rebase-branch = "!git rebase -i `git merge-base master HEAD`"
 	diff = diff --word-diff
 	dl = "!git ll -1"
 	dlc = diff --cached HEAD^
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%an][%ae]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%an][%ae]" --decorate --numstat
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%an][%ae]" --decorate --date=relative
 	la = "!git config -l | grep alias | cut -c 7-"	
 	unstage = reset HEAD --
 	last = log -1 HEAD
-	prmerge = "!sh -c \"git fetch origin pull/$1/head:$1 && git checkout $1\" -"
-	lgraph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-	lgraph2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	prmerge = "!sh -c \"git fetch origin pull/$1/head:PR-$1 && git checkout PR-$1\" -"
+	lgraph = log --graph --abbrev-commit --decorate --format=format:'%C(bold green)%h%C(reset) - %C(bold green)%ar%C(reset)%C(bold yellow)%d%C(reset)%n''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lgraph2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold green)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 
 [mergetool "p4merge"]
 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
@@ -43,3 +52,5 @@
 
 [merge]
 	tool = p4merge
+[credential]
+	helper = osxkeychain
